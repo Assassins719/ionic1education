@@ -1,0 +1,367 @@
+<ion-view hide-nav-bar="true">
+   <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+        <label class="">
+            <center><img src="img/grades-today-yellow1.png" width="120" alt="logo"></center>
+        </label>
+
+        <button class="button button-icon pull-right"   ng-click="toggleMenu()"><img src="img/sidemenu.png" width="30"  alt="logo"></button>
+    </ion-header-bar>
+
+    <ion-content class="bg-muted" style="background-color: #eeedee;">
+        <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+        <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop">
+                <div class="col col-70">
+                    <h5> <span style="font-size:12px;">Name:</span><span style="font-family:dashboardfont1;"> <br/><b>Amarjit Singh</b></span>            </h5>
+                </div>
+                <div class="col col-30">
+                    <h5> <span style="font-size:12px;">Class:</span><span style="font-family:dashboardfont1;"> <br/><b>VI A</b></span></h5>
+                </div>
+            </div>
+        </div>
+        <div class="row  text-center">
+            <div class="row tabbottom">
+                <div class="col col-70">
+                    <h5> <span style="font-size:12px;">Admn.No:</span><span style="font-family:dashboardfont1;"> <br/><b>SNS/GN/12/245</b></span></h5>
+                </div>
+                <div class="col col-30">
+                    <h5> <span style="font-size:12px;">Roll No:</span><span style="font-family:dashboardfont1;"><br/> <b>905</b></span></h5>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop tabbottom">
+                <div class="col col-35">
+                     <ion-checkbox ng-model="modelData.class1">Class III</ion-checkbox>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop tabbottom">
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.classterm1">TERM 1</ion-checkbox>
+                </div>
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.classterm2">TERM 2</ion-checkbox>
+                </div>
+            </div>
+        </div>
+         <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop tabbottom">
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.class2">Class IV</ion-checkbox>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop tabbottom">
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.classterm3">TERM 1</ion-checkbox>
+                </div>
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.classterm4">TERM 2</ion-checkbox>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop tabbottom">
+                <div class="col col-100">
+                    <ion-checkbox ng-model="modelData.class3">Class V</ion-checkbox>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;'>
+            <div class="row tabtop tabbottom">
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.classterm5">TERM 1</ion-checkbox>
+                </div>
+                <div class="col col-35">
+                    <ion-checkbox ng-model="modelData.classterm6">TERM 2</ion-checkbox>
+                </div>
+            </div>
+        </div>
+         
+      
+    
+
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.classterm1">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Term 1 (Class III) </span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA1</b></th>
+                                <th align="left"><b>FA2</b></th>
+                                <th align="left"><b>SA1</b></th>
+                                <th align="left"><b>T1</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.FA2}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row text-center" style='margin-top:5px;'  ng-show="modelData.classterm2">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Term 2 (Class III) </span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA3</b></th>
+                                <th align="left"><b>FA4</b></th>
+                                <th align="left"><b>SA2</b></th>
+                                <th align="left"><b>T2</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.FA2}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.class1">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Overall (Class III)</span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA Overall</b></th>
+                                <th align="left"><b>SA Overall</b></th>
+                                <th align="left"><b>Total</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center " style='margin-top:5px;'ng-show="modelData.class1">
+            <div class="row tabtop tabbottom" >
+                <div-highchart-map   class="highchartmap23"></div-highchart-map>
+            </div>     
+        </div>
+
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.classterm3">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Term 1 (Class VI) </span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA1</b></th>
+                                <th align="left"><b>FA2</b></th>
+                                <th align="left"><b>SA1</b></th>
+                                <th align="left"><b>T1</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.FA2}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.classterm4">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Term 2 (Class VI) </span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA3</b></th>
+                                <th align="left"><b>FA4</b></th>
+                                <th align="left"><b>SA2</b></th>
+                                <th align="left"><b>T2</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.FA2}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.class2">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Overall (Class VI)</span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA Overall</b></th>
+                                <th align="left"><b>SA Overall</b></th>
+                                <th align="left"><b>Total</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;'ng-show="modelData.class2" >
+            <div class="row tabtop tabbottom" >
+                <div-highchart-map2   class="highchartmap23"></div-highchart-map2>
+            </div>    
+        </div>
+
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.classterm5">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Term 1 (Class V) </span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA1</b></th>
+                                <th align="left"><b>FA2</b></th>
+                                <th align="left"><b>SA1</b></th>
+                                <th align="left"><b>T1</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.FA2}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.classterm6">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Term 2 (Class V) </span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA3</b></th>
+                                <th align="left"><b>FA4</b></th>
+                                <th align="left"><b>SA2</b></th>
+                                <th align="left"><b>T2</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.FA2}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" style='margin-top:5px;' ng-show="modelData.class3">
+            <div class="row tabbottom tabtop">
+                <div class="col col-100">
+                    <center>
+                        <h5 style="text-align:left;"><span style="font-size:12px;"> Overall (Class V)</span></h5>
+                    </center>
+                    <table datatable="ng" class="row-border hover" width="100%">
+                        <thead>
+                            <tr class="row-border " style="border-bottom:1px solid #ccc;">
+                                <th align="left"><b>Subject</b></th>
+                                <th align="left"><b>FA Overall</b></th>
+                                <th align="left"><b>SA Overall</b></th>
+                                <th align="left"><b>Total</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.subject}}</td>
+                                <td align="left" style="font-family:dashboardfont1;"> {{ data.FA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.SA1}}</td>
+                                <td align="left" style="font-family:dashboardfont1;">{{ data.T1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center " style='margin-top:5px;' ng-show="modelData.class3">
+            <div class="row tabtop tabbottom" >
+                <div-highchart-map3   class="highchartmap23"></div-highchart-map3>
+            </div>    
+        </div>
+
+        <!-- Latest comment -->
+    </ion-content>
+</ion-view>

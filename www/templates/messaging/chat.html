@@ -1,0 +1,29 @@
+<ion-view view-title="Adam Something">
+  <ion-nav-buttons side="secondary">
+    <img src="img/adam.jpg" alt="" class="thumb-xs rounded b b-light">
+  </ion-nav-buttons>
+
+  <ion-content>
+    <!-- Chat bubbles -->
+    <div class="list chat-bubble">
+      <div class="item item-avatar" ng-class="item.isMe?'me':'friend'" href="#" ng-repeat="item in messages">
+        <img ng-src="{{item.avatar}}" ng-if="!item.isMe">
+        <div class="bubble" ng-class="{'bubble-image': item.type == 'image'}">
+          <i class="icon-tail"></i>
+          <span class="content" ng-if="item.type !== 'image'" ng-bind-html="item.body | nl2br"></span>
+          <img ng-src="{{item.body}}" alt="" ng-if="item.type == 'image'">
+        </div>
+        <span class="message-status">{{item.timestamp}}</span>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="item-input-inset" keyboard-attach>
+    <button class="button button-clear button-icon ion-camera">
+    </button>
+    <label class="item-input-wrapper no-bg">
+      <input type="text" placeholder="Type a message">
+    </label>
+    <button class="button button-clear button-calm">Send
+    </button>
+  </ion-footer-bar>
+</ion-view>

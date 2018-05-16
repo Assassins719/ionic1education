@@ -1,0 +1,12 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.0"
+  },
+  "dependencies": {
+    "ionic-ion-tinder-cards": "ionic-contrib-tinder-cards#*",
+    "ngCordova": "^0.1.27-alpha",
+    "highcharts-ng": "^1.0.1"
+  }
+}

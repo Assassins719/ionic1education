@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true" >
+    <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+        <label class="">
+            <center><img src="img/grades-today-yellow1.png" width="100" alt="logo"></center>
+        </label>
+
+        <button class="button button-icon pull-right"   ng-click="toggleMenu()"><img src="img/sidemenu.png" width="30"  alt="logo"></button>
+    </ion-header-bar>
+
+  <ion-content class="has-subheader">
+    <div class="list list-messages">
+      <div class="item item-avatar item-text-wrap" ng-repeat="i in [0]" ui-sref="tab.chat">
+        <img src="img/adam.jpg" random-avatar alt="">
+        <h2>Adam</h2>
+        <p>
+         Hey, tomorrow kids are going on picnic 
+        </p>
+        <div class="pos-abt text-muted text-xs right top wrapper">
+          Nov 3
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

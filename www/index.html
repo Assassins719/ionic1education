@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title></title>
+
+
+        <!-- compiled css output -->
+        <link href="css/ionic.app.css" rel="stylesheet">
+       
+        <link href="css/font.css" rel="stylesheet">
+        <!--link href="lib/applozic/css/mck-combined.min.css" rel="stylesheet">
+        <link href="lib/applozic/css/app/mck-sidebox-1.0.css" rel="stylesheet">
+    <link href="lib/applozic/css/app/mck-mobile-fullview.css" rel="stylesheet"-->
+
+        <style>
+            
+.tabs-striped.tabs-light .tab-item.tab-item-active, .tabs-striped.tabs-light .tab-item.active, .tabs-striped.tabs-light .tab-item.activated {
+    margin-top: -2px;
+    color: #ed475b;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: transparent;
+}
+
+            .highchartmap23{
+                min-width:90%;
+                max-width: 100%;
+
+
+            }
+
+
+            h3  {
+                font-family: 'MTCORSVA';
+            }
+            h4  {
+                font-family: 'MTCORSVA';
+            }
+            .fc-center h2{
+    font-size: 13pt;
+}
+        </style>
+        <style>
+            .tabtop {
+                border-top:1px solid #DCDCDC;
+                border-left:1px solid #DCDCDC;
+                border-right:1px solid #DCDCDC;
+                border-bottom:none;
+                background-color:#fff;
+                padding-right:5px;
+                padding-left:5px;
+                padding-top:5px;
+                box-shadow: 1px 1px #dcdcdc;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px; 
+            }
+            .tabbottom {
+                border-top:none;
+                border-left:1px solid #DCDCDC;
+                border-right:1px solid #DCDCDC;
+                border-bottom:1px solid #DCDCDC;
+                border-top:none;
+                background-color:#fff;
+                padding-right:5px;
+                padding-left:5px;
+                padding-top:5px;
+                box-shadow: 1px 1px  #dcdcdc;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .angular-google-map-container1 { 
+                height: 100%; 
+            }
+
+        </style>
+        
+       
+
+
+
+    </head>
+    <body ng-app="starter">
+    <ion-side-menus>
+        <div ng-include="&apos; templates/sidemenu.html &apos;"></div>
+
+        <ion-side-menu-content drag-content="false">
+            <!--
+              The nav bar that will be updated as we navigate between views.
+            -->
+            <ion-nav-bar class="bar-calm">
+                <ion-nav-back-button>
+                </ion-nav-back-button>
+            </ion-nav-bar>
+
+            <!--
+              The views will be rendered in the <ion-nav-view> directive below
+              Templates are in the /templates folder (but you could also
+              have templates inline in this html file if you'd like).
+            -->
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+
+    </ion-side-menus>
+
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--script src="cordova.js"></script-->
+
+    <!-- your app's js -->
+
+
+
+    <script src="js/app.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/moment.min.js"></script>
+   
+    <script src="js/highcharts.src.js.js"></script>
+    <script src="js/drilldown.js"></script>
+    <script src="js/highcharts-more.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/photo.service.js"></script>
+    
+    <script src="js/filters.js"></script>
+    <script src="js/ionic-ion-autoListDivider.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyADN-ez1Ooott4csBRI4PzdgnzOxvOa3nY&libraries=geometry'></script>
+<!--script type="text/javascript" src="lib/applozic/js/mck-ui-plugins.min.js"></script>
+    <script type="text/javascript" src="lib/applozic/js/mck-ui-widget.min.js"></script>
+    <script type="text/javascript" src="lib/applozic/js/mck-emojis.min.js"></script>
+    <script type="text/javascript" src="lib/applozic/js/mck-socket.min.js"></script>
+     <script type="text/javascript" src="lib/applozic/js/locationpicker.jquery.min.js"></script>
+    <script type="text/javascript" src="lib/applozic/js/app/mck-common-1.0.js"></script>
+    <script type="text/javascript" src="lib/applozic/js/app/mck-sidebox-1.0.js"></script-->
+    
+</body>
+</html>

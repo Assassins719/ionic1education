@@ -1,0 +1,41 @@
+
+<ion-view hide-nav-bar="true" >
+      <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+        <label class="">
+            <center><img src="img/grades-today-yellow1.png" width="100" alt="logo"></center>
+        </label>
+
+        <button class="button button-icon pull-right"   ng-click="toggleMenu()"><img src="img/sidemenu.png" width="30"  alt="logo"></button>
+    </ion-header-bar>
+
+    <ion-content class="bg-muted" style="background-color: #eeedee;">
+        <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+   
+
+      
+
+     
+        <div class="row text-center "  >
+            <div class="row  tabbottom" >
+                
+                <div-highchart-line id="div-highchart-line" class="highchartmap23"></div-highchart-line>
+
+            </div>
+        </div>
+
+
+        <div class="row text-center " style="margin-top:5px;" >
+            <div class="row  tabbottom" >
+
+                 <div-highchart-line1   class="highchartmap23"></div-highchart-line1>
+
+            </div>
+        </div>
+        
+
+          
+       
+        <!-- Latest comment -->
+    </ion-content>
+    
+</ion-view>

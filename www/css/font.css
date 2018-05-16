@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'MTCORSVA';
+	src: url('../img/font/MTCORSVA.eot');
+	src: local('MTCORSVA'), url('../img/font/MTCORSVA.woff') format('woff'), url('../img/font/MTCORSVA.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'dashboardfont1';
+	src: url('../img/font/typo-grotesk-rounded.light.otf');
+	src: local('dashboardfont1'), url('../img/font/typo-grotesk-rounded.light.otf') format('woff'), url('../img/font/typo-grotesk-rounded.light.otf') format('truetype');
+}
+@font-face {
+	font-family: 'dashboardfont2';
+	src: url('../img/font/sf-buttacup.lettering.ttf');
+	src: local('dashboardfont1'), url('../img/font/sf-buttacup.lettering.ttf') format('woff'), url('../img/font/sf-buttacup.lettering.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'shawdowintolight';
+	src: url('../img/font/ShadowsIntoLight.ttf');
+	src: local('shawdowintolight'), url('../img/font/ShadowsIntoLight.ttf') format('woff'), url('../img/font/ShadowsIntoLight.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../img/font/Raleway/Raleway-Regular.ttf');
+	src: local('Raleway'), url('../img/font/Raleway/Raleway-Regular.ttf') format('woff'), url('../img/font/Raleway/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Lobster';
+	src: url('../img/font/Lobster-Regular.ttf');
+	src: local('Raleway'), url('../img/font/Lobster-Regular.ttf') format('woff'), url('../img/font/Lobster-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'opensans';
+	src: url('../img/font/Open_Sans/OpenSans-Regular.ttf');
+	src: local('Raleway'), url('../img/font/Open_Sans/OpenSans-Regular.ttf') format('woff'), url('../img/font/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_6771">Text with this font applied</p> */
+.fontsforweb_fontid_6771 {
+	font-family: 'MTCORSVA' !important;
+}
+
+
+/* Font downloaded from FontsForWeb.com */

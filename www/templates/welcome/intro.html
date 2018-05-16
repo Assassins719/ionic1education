@@ -1,0 +1,59 @@
+
+<ion-view hide-nav-bar="true" ng-class="{'bg-gradient': activeIndex != 0,'bg-gradient': activeIndex != 2}" vertical layout>
+  <div flex relative >
+    <ion-slide-box fit on-slide-changed="slideHasChanged($index)" active-slide="activeIndex" ng-init="activeIndex = 0">
+      <ion-slide class="text-center " style="background:linear-gradient(0, #4e89e8,#75c6fc)" >
+          <center><img src="img/grades-today-yellow1.png" style='margin-top:300px; 'width="210" alt="logo"></center>
+          <h4 class="font-thin text-lg" style="margin-top:20px;font-family:opensans;font-size:20px;color:white"><b>Don’t judge them ... encourage them</b></h4>
+        
+      </ion-slide>
+      
+      <ion-slide class=" flex-vertical-center" style="background:linear-gradient(0, #4e89e8,#75c6fc);color:white">
+        <h2 class="font-thin light" style="color:#000000;padding-left: 100px;text-align:left;color:white;font-family:opensans">GETTING to know the feature's</h2>
+        <table>
+            <tr>
+                <td style="padding-bottom: 10px;padding-left: 100px;">
+                  <img src="img/curriculum23.png" width="30" style="display:inline;">
+                  </td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans">
+                  Tracking students grades over the years in school</td>
+            </tr>
+             <tr >
+                <td style="padding-bottom: 10px;padding-left: 100px;"><img src="img/icon91.png" width="30" style="display:inline;"></td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans"> Benchmarking achievement against class average</td>
+            </tr>
+             <tr>
+                <td style="padding-bottom: 10px;padding-left: 100px"><img src="img/browser1.png"width="30" style="display:inline;"></td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans"> Individual subject wise performance tracker</td>
+            </tr>
+             <tr>
+                <td style="padding-bottom: 10px;padding-left: 100px"><img src="img/curriculum1.png" width="30" style="display:inline;"></td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans"> Monthly school activity planner sharing</td>
+            </tr>
+              <tr>
+                <td style="padding-bottom: 10px;padding-left: 100px;"><img src="img/map1.png"  width="30" style="display:inline;"></td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans"> School Bus Tracker - GPS enabled (real time)</td>
+            </tr>
+             <tr>
+                <td style="padding-bottom: 10px;padding-left: 100px;"><img src="img/curriculum234.png" width="30" style="display:inline;"></td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans"> Medical records - tracking basic health information</td>
+            </tr>
+             <tr>
+                <td style="padding-bottom: 10px;padding-left: 100px;"><img src="img/chat1.png" width="30" style="display:inline;"></td>
+                <td style="vertical-align: middle;padding-bottom: 10px;padding-left: 4px;padding-right: 5px;text-align:left;font-family:opensans"> Chat Mode - Facilitating parents connect onto parents of classmates</td>
+            </tr>
+        </table>
+         </ion-slide>
+      
+        <ion-slide class="text-center flex-vertical-center" style="background:linear-gradient(0, #4e89e8,#75c6fc)">
+          <h3 style="color:#fff;padding-left:50px;padding-right:50px;font-family:opensans;font-size:20px;text-align:justify"><b>“At the end of the day, the most overwhelming key to a child’s success is the positive involvement of parents.”</b></h3>
+        <p align="right" style="font-family: Calibri; padding-right:40px;font-family:opensans"><b>- Jane D. Hull</b></p>
+      </ion-slide>
+    </ion-slide-box>
+  </div>
+
+    <div class="padder hideLogin" id='signInBlock' ng-class="{'display-login': activeIndex == 2,'hideLogin': activeIndex != 2}" style="background-color:#4e89e8;">
+    <button class="button button-block" style="background-color:#fff;color:#000;font-family:opensans" ng-class="{'button-light button-outline': activeIndex != 0, 'button-calm': activeIndex == 0,'button-light button-outline': activeIndex != 2, 'button-calm': activeIndex == 2}" ng-click="openLogin()"><b>Sign in</b></button>
+    <button class="button button-block button-clear button-light" style="color:#000; font-family:opensans" ng-class="{'button-calm': activeIndex == 0,'button-calm': activeIndex == 2}" ng-click="openLogin()">Contact Us</button>
+  </div>
+</ion-view>

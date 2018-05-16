@@ -1,0 +1,448 @@
+
+<ion-view hide-nav-bar="true" >
+    <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+        <label class="">
+            <center><img src="img/grades-today-yellow1.png" width="100" alt="logo"></center>
+        </label>
+
+        <button class="button button-icon pull-right"   ng-click="toggleMenu()"><img src="img/sidemenu.png" width="30"  alt="logo"></button>
+
+    </ion-header-bar>
+
+    <ion-content class="bg-muted" style="background-color: #eeedee;">
+        <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop" >
+                <div class="col col-70">
+                    <h5> <span style="font-size:12px;">Name:</span><span style="font-family:dashboardfont1;"> <br/><b>Amarjit Singh</b></span> </h5>
+                </div>
+
+                <div class="col col-30">
+                    <h5> <span style="font-size:12px;">Class:</span><span style="font-family:dashboardfont1;"> <br/><b>VI A</b></span></h5>  
+                </div>
+            </div>    
+        </div>
+        <div class="row  text-center" >
+            <div class="row tabbottom" >
+                <div class="col col-70">
+                    <h5> <span style="font-size:12px;">Admn.No:</span><span style="font-family:dashboardfont1;"> <br/><b>SNS/GN/12/245</b></span></h5>
+                </div>
+
+                <div class="col col-30">
+                    <h5> <span style="font-size:12px;">Roll No:</span><span style="font-family:dashboardfont1;"><br/> <b>905</b></span></h5> 
+                </div>
+            </div>
+        </div>
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+
+                <div class="col col-35">
+                    <ion-checkbox   ng-model="ModalData.t1" >TERM 1</ion-checkbox>
+                </div>
+
+                <div class="col col-35">
+                    <ion-checkbox   ng-model="ModalData.t2" >TERM 2</ion-checkbox>
+                </div>
+
+
+            </div>    
+        </div>
+
+        <div class="row text-center " style='margin-top:5px;' >
+            <div class="row tabtop" >
+                <div class="col col-50">
+                    <center> <h5 style="text-align:left;"><span style="font-size:12px;"> Grade-T1 </span></h5></center>
+                </div>
+
+            </div>    
+        </div>
+
+        <div class="row  text-center" >
+            <div class="row tabbottom " >
+                <div class="col col-90">
+                    <center><h5 style="font-family:dashboardfont1;font-size:25px;"><b> A2 </b></h5></center>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center " style='margin-top:5px;' >
+            <div class="row tabtop"  >
+                <div class="col col-90">
+                    <center> <h5 style="text-align:left;"><span style="font-size:12px;"> Attendance </h5></center>
+                </div>
+            </div>    
+        </div>
+        <div class="row  text-center" >
+            <div class="row tabbottom " >
+                <div class="col col-90">
+                    <center> <h5 style="font-family:dashboardfont1;font-size:25px;"> <b>198/213</b></h5></center>
+                </div>
+
+            </div>
+        </div>
+        <div class="row  text-center" style='margin-top:5px;' ng-show="ModalData.t1">
+            <div class="row tabbottom tabtop" >
+                <div class="col col-100">
+                    <center> <h5 style="text-align:left;"><span style="font-size:12px;"> Term 1 </h5></center>
+                    <table datatable="ng" class="row-border hover" width="100%" >
+                        <thead>
+
+                            <tr class="row-border "style="border-bottom:1px solid #ccc;">
+                                <th  align="left"><b>Subject</b></th>
+                                <th   align="left"><b>FA1</b></th>
+                                <th   align="left"><b>FA2</b></th>
+                                <th  align="left"><b>SA1</b></th>
+                                <th  align="left"><b>T1</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatable" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;"><b>{{ data.subject}}</b></td>
+                                <td align="left" style="font-family:dashboardfont1;"> <b>{{ data.FA1}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.FA2}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.SA1}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.T1}}</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="row  text-center" style='margin-top:5px;' ng-show="ModalData.t2">
+            <div class="row tabbottom tabtop" >
+                <div class="col col-100">
+                    <center> <h5 style="text-align:left;"><span style="font-size:12px;"> Term 2 </h5></center>
+                    <table datatable="ng" class="row-border hover" width="100%" >
+                        <thead>
+
+                            <tr class="row-border "style="border-bottom:1px solid #ccc;">
+                                <th  align="left"><b>Subject</b></th>
+                                <th   align="left"><b>FA3</b></th>
+                                <th   align="left"><b>FA4</b></th>
+                                <th  align="left"><b>SA2</b></th>
+                                <th  align="left"><b>T2</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatableTerm2" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;"><b>{{ data.subject}}</b></td>
+                                <td align="left" style="font-family:dashboardfont1;"> <b>{{ data.FA3}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.FA4}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.SA2}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.T2}}</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="row  text-center" style='margin-top:5px;' >
+            <div class="row tabbottom tabtop" >
+                <div class="col col-100">
+                    <center> <h5 style="text-align:left;"><span style="font-size:12px;"> Overall </h5></center>
+                    <table datatable="ng" class="row-border hover" width="100%" >
+                        <thead>
+
+                            <tr class="row-border "style="border-bottom:1px solid #ccc;">
+                                <th  align="left"><b>Subject</b></th>
+                                <th   align="left"><b>FA</b></th> 
+                                <th  align="left"><b>SA</b></th>
+                                <th  align="left"><b>Total</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in datatableOverall" style="border-bottom:1px solid #ccc;">
+                                <td align="left" style="font-family:dashboardfont1;"><b>{{ data.subject}}</b></td>
+                                <td align="left" style="font-family:dashboardfont1;"> <b>{{ data.FA}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.SA}}</b></td>
+                                <td align="left"style="font-family:dashboardfont1;"><b>{{ data.Total}}</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="row text-center" style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div-highchart-map   width="100%" class="highchartmap23"></div-highchart-map>
+            </div>    
+        </div>
+        
+        <div class="row text-center" style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> English</b></h6>
+                </div>
+
+            </div> 
+        </div>
+        <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+                 <div-jq-gauge  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge>
+
+         
+            </div>
+        </div>
+
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> Hindi</b></h6>
+                </div>
+
+            </div> 
+        </div>
+       <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+                <div-jq-gauge1  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge1>
+
+         
+            </div>
+        </div>
+
+
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> Math</b></h6>
+                </div>
+
+            </div> 
+        </div>
+       <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+               <div-jq-gauge2  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge2>
+
+         
+            </div>
+        </div>
+
+
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> Science</b></h6>
+                </div>
+
+            </div> 
+        </div>
+       <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+                  <div-jq-gauge3  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge3>
+
+         
+            </div>
+        </div>
+
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> Social Science</b></h6>
+                </div>
+
+            </div> 
+        </div>
+       <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+                  <div-jq-gauge4  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge4>
+
+         
+            </div>
+        </div>
+
+
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> Sanskrit</b></h6>
+                </div>
+
+            </div> 
+        </div>
+       <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+               <div-jq-gauge5  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge5>
+
+         
+            </div>
+        </div>
+
+        <div class="row text-center "style='margin-top:5px;' >
+            <div class="row tabtop tabbottom" >
+                <div class="col col-75">
+                    <h6 style="text-align: left;"> Subject wise class comparison</h6>
+                </div>
+                <div class="col col-25">
+                    <h6 ><b> Computer Science</b></h6>
+                </div>
+
+            </div> 
+        </div>
+       <div class="row text-center " >
+            <div class="row tabtop " >
+                <div class="col col-10"></div>
+                <div class="col col-10" style="border:1px solid #e1e1e1; margin-left:5px;border-radius:3px; background-color:#0091EA;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Highest</h6>
+
+                <div class="col col-10" style="border:1px solid #e1e1e1;margin-left:5px; border-radius:3px; background-color:#FF9800;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Average</h6>
+                <div class="col col-10" style="border:1px solid #000;margin-left:5px; border-radius:3px; background-color:#000000;width:2px;height:1px;">
+                </div>
+                <h6 style="margin-top:0px;margin-left:3px;">Actual</h6>
+                <div class="col col-10"></div>
+            </div> 
+        </div> 
+
+        <div class="row text-center " style="height:250px;" >
+            <div class="row   tabbottom" style=" margin-top:0px;">
+
+                  <div-jq-gauge6  style="width: 150%; height: 150%;margin-top:12px;"></div-jq-gauge6>
+
+         
+            </div>
+        </div>
+
+
+        <!-- Latest comment -->
+    </ion-content>
+
+</ion-view>
